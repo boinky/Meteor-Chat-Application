@@ -1,0 +1,20 @@
+<template name="appChat">
+	<div class="row">
+		<div class="col-sm-4">
+			{{#each messages}}
+				<div class="alert alert-info">
+					<b>{{name}}</b> : 
+						{{text}} 
+					<button class="btn btn-danger btn-small btnDelete">&times;</button>
+				</div>
+			{{/each}}
+		</div>
+		<div class="col-sm-4">
+			<form class="form-inlin">
+				<input type="text" class="form-control txtName" placeholder="username"/>
+				<input type="text" class="form-control txtText" placeholder="Type a Messages"/>
+			</form>
+		</div>
+	</div>
+	
+</template>
