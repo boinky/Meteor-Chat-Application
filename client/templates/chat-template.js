@@ -10,10 +10,14 @@ Template.appChat.events({
 		return false;
 	},
 
-	"keyup .txtText": function(event){
+	"keyup .txtGender": function(event){
 		if(event.keyCode==13){
 			Messages.insert({name: $(".txtName").val(),
-				text: $(".txtText").val(), createdAt: new Date()
+				address: $(".txtAddress").val(), 
+				status: $(".txtStatus").val(),
+				gender: $(".txtGender").val(),
+				bday: $(".txtBD").val(),
+				createdAt: new Date()
 		});
 			$(".txtText").val("");
 			$(".txtText").focus();

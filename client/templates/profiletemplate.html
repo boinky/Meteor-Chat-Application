@@ -1,0 +1,33 @@
+<template name="profileMod">
+	<div class="page-header">
+		<h1>Meteor Profiles</h1>
+	</div>
+	<div class="container">
+		<form class="form-inline">
+			<input type="text" class="form-control txtLname" placeholder="Last Name"/>
+			<input type="text" class="form-control txtFname" placeholder="First Name"/>
+			<input type="text" class="form-control txtMname" placeholder="Middle Name"/><br><br>
+			<input type="text" class="form-control txtAddress" placeholder="Address"/>
+			<input type="text" class="form-control txtStatus" placeholder="Status"/>
+			<input type="text" class="form-control txtGender" placeholder="Gender"/><br><br>
+
+			<button class="btn btn-default btnSubmit">SUBMIT</button>
+			<!--<input type="date" class="form-control txtBD" placeholder="Birthday"/><br><br>-->
+		</form>
+	</div>
+	
+	{{#each profiles}}
+	<div class="col-sm-12">
+			
+		<div class="txtName">
+			
+			<b>Name: </b><h4>{{Lastname}}, {{Firstname}} {{Middlename}}</h4><br>
+			<b>Address: </b>{{address}}<br>
+			<b>Status: </b>{{status}}<br>
+			<b>Gender: </b>{{gender}}<br><br>
+			<button class="btn btn-danger btnDelete">&times;</button>
+		</div>
+		<hr>
+</div>
+	{{/each}}
+</template>

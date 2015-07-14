@@ -1,19 +1,26 @@
 <template name="appChat">
 	<div class="row">
 		<div class="col-sm-4">
-			{{#each messages}}
-				<div class="alert alert-info">
-					<b>{{name}}</b> : 
-						{{text}} 
-					<button class="btn btn-danger btn-small btnDelete">&times;</button>
-				</div>
-			{{/each}}
+			<form class="form-inline">
+				<input type="text" class="form-control txtName" placeholder="Name"/>
+				<input type="text" class="form-control txtAddress" placeholder="Address"/>
+				<input type="text" class="form-control txtStatus" placeholder="Status"/>
+				<input type="text" class="form-control txtGender" placeholder="Gender"/>
+				<!--<input type="date" class="form-control txtBD" placeholder="Birthday"/><br><br>-->
+		
+			</form>
 		</div>
 		<div class="col-sm-4">
-			<form class="form-inlin">
-				<input type="text" class="form-control txtName" placeholder="username"/>
-				<input type="text" class="form-control txtText" placeholder="Type a Messages"/>
-			</form>
+			{{#each messages}}
+				<div class="alert alert-info">
+						{{name}} <br>
+						{{address}}<br>
+						{{status}}<br>
+						{{gender}}<br>
+						{{bday}} <br>
+					
+				</div>
+			{{/each}}
 		</div>
 	</div>
 	
